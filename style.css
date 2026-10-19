@@ -1,0 +1,17 @@
+.description {
+    font-size: 2em;
+}
+
+.presentation {
+    display: flex;
+}
+
+.presentation-image {
+    width: 320px;
+    height: auto;
+}
+
+.help-image {
+    width: 200px;
+    height: auto;
+}

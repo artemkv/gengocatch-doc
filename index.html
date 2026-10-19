@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gengo Catch - Japanese Vocabulary Extractor</title>
+  <link rel="stylesheet" href="sakura-earthly.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <h1>Gengo Catch</h1>
+    <p class="description">Japanese Vocabulary Extractor</p>
+    <div class="presentation">
+      <img class="presentation-image" src="presentation.png" alt="app-presentation" />
+      <div>
+        <h2>What it does</h2>
+        <ul>
+          <li>Captures images of your main monitor</li>
+          <li>Delivers to your mobile (or tablet)</li>
+          <li>Extracts Japanese text</li>
+          <li>Displays the vocabulary list</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <h1>How it works</h1>
+    <ul>
+      <li><b>No login</b></li>
+      <p>No need to create an account. Just use.</p>
+      <li><b>Real time</b></li>
+      <p>Captures a new image every second (configurable).</p>
+      <li><b>Full screen</b></li>
+      <p>No need to switch between windows. Immerse in the content.</p>
+      <li><b>100% private</b></li>
+      <p>The screen captures stay on your device and are processed locally.</p>
+    </ul>
+
+    <h1>How to install</h1>
+    <h2>Your Windows PC</h2>
+
+    <p>The server process (JPServer) runs on your Windows PC.</p>
+    <p>
+    <ol>
+      <li>Download the &lt;<a href="https://github.com/artemkv/jpserver/releases">latest release</a>&gt;</li>
+      <li>Copy <code>jpserver.exe</code> anywhere to your device (e.g. <code>C:\mytools</code>)</li>
+      <li>Run <code>jpserver.exe</code></li>
+      <p>If you don't trust the executable, you are free to review the &lt;<a
+          href="https://github.com/artemkv/jpserver">source code</a>&gt;. Feel free to clone the repo and build the
+        <code>jpserver.exe</code> from the sources. You can even create your own implementation, as long as it respects
+        the API.
+      </p>
+      <li>Windows will ask you if you want to enable network access. <b>IMPORTANT:</b> You need to Allow access.</li>
+      <img class="help-image" src="windows_firewall_propmpt.png" alt="Windows Firewall Prompt" />
+      <p>This is required because <code>jpserver.exe</code> creates a local web server. The mobile app connects to that
+        server to retrieve screen captures. By default, the web server binds to your local IP and is not accessible
+        outside of your WiFi (you can confirm this looking at the output of the tool. It should show something like
+        "192.168.0.13").</p>
+      <li>The QR code will be shown in the terminal</li>
+      <img class="help-image" src="qrcode.png" alt="QR Code" />
+      <p>You will need this code to connect the app.</p>
+    </ol>
+    </p>
+
+    <h2>Mobile app</h2>
+    <p>At the moment, the mobile app is only available on Android.</p>
+    <p>At the moment, the mobile app is in internal testing. <b>Use the link provided to you to download the app and
+        become
+        a tester.</b></p>
+
+    <ol>
+      <li>Install the GengoCatch mobile app from the PlayStore</li>
+      <li><b>IMPORTANT:</b> Make sure your app is connected to the same WiFi as your main PC!!!</li>
+      <li>Open the app and scan the QR code</li>
+      <img class="help-image" src="mobile.png" alt="Connecting the app" />
+      <p>The app should connect and you should start seeing captures of your main screen.</p>
+    </ol>
+
+    <h1>Requirements</h1>
+    <ul>
+      <li>Windows 8 or higher</li>
+      <li>DirectX 11.1+ compatible GPU</li>
+      <li>Go 1.26 or higher</li>
+    </ul>
+
+    <h1>Troubleshooting</h1>
+    <ul>
+      <li>I started the app and scanned the code, but the app cannot connect</li>
+
+      <p>Check that the <code>jpserver.exe</code> is allowed by Windows Firewall</p>
+      <img src="windows_firewall_enabled.png" alt="Firewall settings" />
+
+      <p>Check that <code>jpserver.exe</code> is not blocked by your antivirus program</p>
+      <p>Check that your mobile device is on the same WiFi as your Windows PC</p>
+    </ul>
+  </div>
+</body>
+
+</html>
