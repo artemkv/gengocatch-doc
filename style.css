@@ -4,11 +4,19 @@
 
 .presentation {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .presentation-image {
-    width: 320px;
+    max-width: 320px;
     height: auto;
+}
+
+.presentation-text {
+    flex: 1 1 300px;
 }
 
 .help-image {
