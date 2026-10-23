@@ -49,11 +49,12 @@
     <ol>
       <li>Download the &lt;<a href="https://github.com/artemkv/jpserver/releases">latest release</a>&gt;</li>
       <li>Copy <code>jpserver.exe</code> anywhere to your device (e.g. <code>C:\mytools</code>)</li>
+      <li>Make sure that <code>jpserver.exe</code> is unblocked.</li>
+      <img class="help-image" src="ublock.png" alt="Unblock" />
       <li>Run <code>jpserver.exe</code></li>
       <p>If you don't trust the executable, you are free to review the &lt;<a
           href="https://github.com/artemkv/jpserver">source code</a>&gt;. Feel free to clone the repo and build the
-        <code>jpserver.exe</code> from the sources. You can even create your own implementation, as long as it respects
-        the API.
+        <code>jpserver.exe</code> from the sources.
       </p>
       <li>Windows will ask you if you want to enable network access. <b>IMPORTANT:</b> You need to Allow access.</li>
       <img class="help-image" src="windows_firewall_propmpt.png" alt="Windows Firewall Prompt" />
@@ -64,6 +65,9 @@
       <li>The QR code will be shown in the terminal</li>
       <img class="help-image" src="qrcode.png" alt="QR Code" />
       <p>You will need this code to connect the app.</p>
+      <p><i>Note: Your address and access code are also shown in the terminal. If you don't want to scan QR code, you
+          can
+          enter that information manually</i></p>
     </ol>
     </p>
 
@@ -97,6 +101,15 @@
 
       <p>Check that <code>jpserver.exe</code> is not blocked by your antivirus program</p>
       <p>Check that your mobile device is on the same WiFi as your Windows PC</p>
+      <p>Check that the tool is running on your local WiFi IP address. If you are running VPN, the tool may bind to the
+        VPN network interface instead. You can check your network configuration using <code>ipconfig.exe</code>. This is
+        an example how the local WiFi address may be reported:</p>
+      <img src="ipconfig.png" alt="ipconfig output" />
+
+      <p>You can override the address by creating <code>.env</code> file next to the executable with the following
+        content:
+        <code>JPSERVER_HOST=&lt;YOUR_IP_ADDRESS&gt;</code>
+      </p>
     </ul>
 
     <h1>Did you use AI?</h1>
